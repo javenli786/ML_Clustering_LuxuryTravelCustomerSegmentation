@@ -105,4 +105,3 @@ def prepare_data(guest_data, booking_data):
     )
 
     return df_guest_train, df_booking, df_gb
-
