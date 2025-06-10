@@ -7,6 +7,7 @@ from data_preprocessing import handle_outliers, apply_pca
 from model_training import train_clustering_model
 from mlflow_tracking import setup_mlflow, log_model_to_mlflow, get_tracking_uri
 from model_selection import select_best_model_for_prediction
+from data_upload import upload_to_database
 
 def main():
     # Set data paths
@@ -42,12 +43,53 @@ def main():
 
     print("Model prediction")
     predictions = best_model.predict(X_pca_2)
-    df_result = X_pca_2.copy()
-    df_result["Cluster"] = predictions
 
-    # ! Revise
-    output_path = os.path.join("..", "data", "prediction_result.csv")
-    df_result.to_csv(output_path, index=False)
+    # Merge predictions with the original data
+    
+    # Extract customer data with bookings
+    df_customer_result = df_guest_train[df_guest_train['GuestWithBooking'] == 1].copy()
+    
+    # Merge outlier data
+    df_customer_result = pd.merge(
+        df_customer_result,
+        df_guest_rfm_outlier[['ContactId', 'Outlier']],
+        on='ContactId',
+        how='left'
+    )
 
+
+    df_customer_result['Clustering_SegmentTitle'] = None
+    df_customer_result.loc[df_customer_result['Outlier'] == 1, 'Clustering_SegmentTitle'] = predictions
+
+    # Fill customer marked as outliers with Clustering_SegmentTitle 4
+    df_customer_result['Clustering_SegmentTitle'].fillna(4, inplace=True)
+    
+    
+    # Merge customer data without bookings
+    df_customer_result = pd.concat([
+        df_customer_result,
+        df_guest_train[df_guest_train['GuestWithBooking'] == 0]
+    ], axis=0)
+    
+    
+    # Fill Clustering_SegmentTitle for customers without booking data
+    df_customer_result['Clustering_SegmentTitle'].fillna(5, inplace=True)
+
+    
+    # Merge with booking data
+    booking_cols = ['Adults', 'Child', 'Infant', 'Nights', 'ContactId', 'MetaGroupName']
+    df_gb_result = pd.merge(
+        df_customer_result,
+        df_booking[booking_cols],
+        on='ContactId',
+        how='left'
+    )
+    
+    # Upload to SQL database
+    table_name = f'clustering_result_{pd.Timestamp.now().strftime("%Y%m%d")}'
+    db_uri = """ enter database URI """
+    df = df_gb_result.copy()
+    upload_to_database(df, table_name, db_url, if_exists='replace', index=False)
+    
 if __name__ == "__main__":
     main()
