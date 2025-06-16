@@ -21,6 +21,10 @@
 ###### ▲ The Scree plot of KMeans
 #### 1.4 Model Evaluation
 
+---
+### 2. Production
+
+---
 #### 3. [Data Collection](Code/data_collection.py)
 ###### Sqlchemy and Pandas are leveraged in the step of data collection
 
