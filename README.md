@@ -29,9 +29,10 @@
 
 ---
 #### 1.5 Data Visualization
-### 2. Production
 
 ---
+### 2. Production
+#### The key stages of the production-level clusting model development is demonstrated below.
 #### 2.1 [Data Collection](Code/data_collection.py)
 ###### Sqlchemy and Pandas are leveraged in the step of data collection
 
