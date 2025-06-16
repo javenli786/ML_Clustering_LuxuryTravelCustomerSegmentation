@@ -4,10 +4,12 @@
 #### **1. Process of Business Solution**
 ![](Image/Analysis_Process.png)
 
-##### 2. [Data Preparation](Code/data_preparation.py)
-Numpy and Pandas were utilized in the step of data preparation.
+#### **2. [Data Collection](Code/data_collection.py)**
 
-##### **1.1 Workflow of Customer Segmentation**
+##### **3. [Data Preparation](Code/data_preparation.py)**
+###### Numpy and Pandas were utilized in the step of data preparation for data cleaning and feature engineering.
+
+##### **4. Data Modeling: []()**
 ![](Image/CustomerSegmentation_Workflow.png)
 
 #### **Contact**
