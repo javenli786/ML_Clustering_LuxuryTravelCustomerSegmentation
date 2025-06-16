@@ -28,33 +28,32 @@
 #### 1.4 Model Evaluation
 
 ---
+#### 1.5 Data Visualization
 ### 2. Production
 
 ---
-#### 3. [Data Collection](Code/data_collection.py)
+#### 2.1 [Data Collection](Code/data_collection.py)
 ###### Sqlchemy and Pandas are leveraged in the step of data collection
 
 ---
-#### 4. [Data Preparation](Code/data_preparation.py)
-###### 3.1 Numpy and Pandas are utilized in the step of data preparation for data cleaning.
-###### 3.2 Feature engineering is conducted on the basis of RFM framework.
+#### 2.2 [Data Preparation](Code/data_preparation.py)
+###### 2.2.1 Numpy and Pandas are utilized in the step of data preparation for data cleaning.
+###### 2.2.2 Feature engineering is conducted on the basis of RFM framework.
 
 ---
-#### 4. [Data Exploration](Code/data_exploration.py)
-##### 4.1 General Exploration
+#### 2.3. [Data Exploration](Code/data_exploration.py)
+##### 2.3.1 General Exploration
 ![]
 
-##### 4.2 Segment-Specific Exploration
+##### 2.3.2 Segment-Specific Exploration
 
 ---
-#### 5. Data Modeling
-###### The Process of data modeling for customer segmentation is exhibited below.
 
-##### 5.1 [Data Preprocessing](Code/data_preprocessing.py)
-###### 5.1.1 Isolation Forest is deployed for outlier detection and initial segmentation.
-###### 5.1.2 Principle Component Analysis (PCA) is employed for dimensionalty.
+#### 2.4 [Data Preprocessing](Code/data_preprocessing.py)
+###### 2.4.1 Isolation Forest is deployed for outlier detection and initial segmentation.
+###### 2.4.2 Principle Component Analysis (PCA) is employed for dimensionalty.
 
-##### 5.2 [Model Training](Code/model_training.py)
+##### 2.5 [Model Training](Code/model_training.py)
 
 ---
 #### 6. Model Evaluation
@@ -65,6 +64,7 @@
 ##### 7.1 [Mlflow Tracking](Code/mlflow_tracking.py)
 ##### 7.2 [Model Selection](Code/model_selection.py)
 
+###
 ---
 #### **Contact**
 - ###### **Email:** jeff010426@gmail.com
