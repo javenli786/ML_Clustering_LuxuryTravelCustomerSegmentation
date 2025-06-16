@@ -15,12 +15,14 @@
 #### 1.3 Data Modeling
 ##### 1.3.1 Outlier Detection
 ##### Isolation Forest is developed for outlier handling and initial customer segmentation
-![]
+![](Image/CorrelationMatrix_RFM.png "Correlation Matrix of RFM Variables")
+![](Image/Loading_RFM.png "PCA Loading of RFM Variables")
+
 ##### 1.3.2 Dimensionality Reduction
 ###### Principle Compoment Analysis (PCA) is conducted to reduce dimensionality
 ##### 1.3.3 Clustering Model Building
 ###### Five clustering models are constructed, namely KMeans, AHC, BIRCH, DBSCAN, Mean Shift.
-![](Image/Screeplot_KMeans.png)
+![](Image/Screeplot_KMeans.png "Scree Plot of KMeans")
 ###### ▲ The Scree plot of KMeans
 
 #### 1.4 Model Evaluation
