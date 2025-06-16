@@ -1,8 +1,11 @@
 ### **ML_Clustering_LuxuryTravelCustomerSegmentation**
-##### This project developed an automated machine learning clustering model for the luxury travel industry, enabling customer segmentation and labeling to faciliate the subsequent establishment of a feature dashboard.
+###### This project developed an business solution─an automated machine learning clustering model─for the luxury travel industry, enabling customer segmentation and labeling to faciliate the subsequent establishment of a feature dashboard.
 
-#### **1. Summary**
-##### The 
+#### **1. Process of Business Solution**
+![](Image/Analysis_Process.png)
+
+##### 2. [Data Preparation](Code/data_preparation.py)
+Numpy and Pandas were utilized in the step of data preparation.
 
 ##### **1.1 Workflow of Customer Segmentation**
 ![](Image/CustomerSegmentation_Workflow.png)
