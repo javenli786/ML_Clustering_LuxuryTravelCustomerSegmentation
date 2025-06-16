@@ -49,7 +49,6 @@
 ---
 #### 5. Data Modeling
 ###### The Process of data modeling for customer segmentation is exhibited below.
-![](Image/CustomerSegmentation_Workflow.png)
 
 ##### 5.1 [Data Preprocessing](Code/data_preprocessing.py)
 ###### 5.1.1 Isolation Forest is deployed for outlier detection and initial segmentation.
