@@ -2,23 +2,27 @@
 #### This project develops an business solution─an automated machine learning clustering model─for the luxury travel industry, enabling customer segmentation and labeling to faciliate the subsequent establishment of a feature dashboard.
 
 ---
-#### 1. [Experiment](Code/experiment.ipynb)
-##### The business solution for customer segmentation is designed.
-##### 1.1 Data Preparation
-###### Data is cleaned and RFM framework is applied for feature engineering.
-##### 1.2 Data Exploration
-###### 1.2.1 General Exploration
-###### 1.2.2 Segment-Specific Exploration
-##### 1.3 Data Modeling
-###### 1.3.1 Outlier Detection
-###### Isolation Forest is developed for outlier handling and initial customer segmentation
+### 1. [Experiment](Code/experiment.ipynb)
+#### The business solution for customer segmentation is designed.
+
+#### 1.1 Data Preparation
+##### Data is cleaned and RFM framework is applied for feature engineering.
+
+#### 1.2 Data Exploration
+##### 1.2.1 General Exploration
+##### 1.2.2 Segment-Specific Exploration
+
+#### 1.3 Data Modeling
+##### 1.3.1 Outlier Detection
+##### Isolation Forest is developed for outlier handling and initial customer segmentation
 ![]
-###### 1.3.2 Dimensionality Reduction
+##### 1.3.2 Dimensionality Reduction
 ###### Principle Compoment Analysis (PCA) is conducted to reduce dimensionality
-###### 1.3.3 Clustering Model Building
+##### 1.3.3 Clustering Model Building
 ###### Five clustering models are constructed, namely KMeans, AHC, BIRCH, DBSCAN, Mean Shift.
 ![](Image/Screeplot_KMeans.png)
 ###### ▲ The Scree plot of KMeans
+
 #### 1.4 Model Evaluation
 
 ---
