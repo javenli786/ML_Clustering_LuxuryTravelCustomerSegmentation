@@ -10,6 +10,9 @@
 
 #### 1.2 Data Exploration
 ##### 1.2.1 General Exploration
+![](Image/PercentageByLoyaltyClub.png "Percentage of LoyaltyClub")
+![](Image)
+
 ##### 1.2.2 Segment-Specific Exploration
 
 #### 1.3 Data Modeling
@@ -22,11 +25,14 @@
 
 ##### 1.3.2 Dimensionality Reduction
 ###### Principle Compoment Analysis (PCA) is conducted to reduce dimensionality
+
 ##### 1.3.3 Clustering Model Building
 ###### Five clustering models are constructed, namely KMeans, AHC, BIRCH, DBSCAN, Mean Shift.
+
 ###### K-Means
 ###### The scree plot is visualized to determine the optimal number of K, manifesting that 3 and 4 are elbow points.
 ![](Image/Screeplot_KMeans.png "Scree Plot of KMeans")
+
 ###### The clustering result of KMeans with K=3 and 4 are visualized.
 ![](Image/ScatterPlot_KMeans_3.png "Scatter Plot of KMeans with K=3")
 ![](Image/ScatterPlot_KMeans_4.png "Scatter Plot of KMeans with K=4")
@@ -40,48 +46,67 @@
 ![](Image/ScatterPlot_Birch_3.png "Scatter Plot of BIRCH with K=3")
 ![](Image/ScatterPlot_Birch_4.png "Scatter Plot of BIRCH with K=4")
 
-#### 1.4 Model Evaluation
+###### DBSCAN
+###### The clustering result of DBSCAN is visualized.
+![](Image/ScatterPlot_DBSCAN_4.png "Scatter Plot of DBSCAN")
 
----
+###### Mean Shift
+###### The clustering result of Mean Shift is visualized.
+![](Image/ScatterPlot_MeanShift_4.png "Scatter Plot of MeanShift")
+
+#### 1.4 Model Evaluation
+##### 1.4.1 Effectiveness
+###### According to the clustering results above, KMeans and BIRCH algorithm are capable for this clustering task.
+
+##### 1.4.2 Similarity
+###### Internal cluster validity index (CVIs), Silhouette, Calinski-Harabasz, and Davies-Bouldin indices, are computed, standardized and labelled as “ScaleddScore” to compare cohesion and separation degree within clusters of each model.
+![](Image/Model_EvaluationMetrics.png "Standardized Score of CVIs")
+
+##### 1.4.3 Stability
+###### The clustering outcomes performed by each model on the entire dataset are regarded as the true labels. Each model is re-trained to predict on 50% and 25% subsamples of the data without setting a random seed, with the resulting clusters treated as predicted labels. Subsequently, the Rand Index of each model is computed based on true and predicted labels.
+![](Image/Model_Evaluation_ARI.png)
+
+##### 1.4.4 Summary
+###### K-Means with K=4 is chosen to segment customers given its relatively high extent of effectiveness of clustering, similarity and stability.
+
 #### 1.5 Result Analysis
 
 ---
 ### 2. Production
 #### The key stages of the production-level clusting model development is demonstrated below.
-#### 2.1 [Data Collection](Code/data_collection.py)
-###### Sqlchemy and Pandas are leveraged in the step of data collection
 
----
+#### 2.1 [Data Collection](Code/data_collection.py)
+###### Sqlchemy and Pandas are leveraged in the step of data collection.
+
+
 #### 2.2 [Data Preparation](Code/data_preparation.py)
 ###### 2.2.1 Numpy and Pandas are utilized in the step of data preparation for data cleaning.
 ###### 2.2.2 Feature engineering is conducted on the basis of RFM framework.
 
----
 #### 2.3. [Data Exploration](Code/data_exploration.py)
 ##### 2.3.1 General Exploration
-![]
-
 ##### 2.3.2 Segment-Specific Exploration
 
----
-
 #### 2.4 [Data Preprocessing](Code/data_preprocessing.py)
-###### 2.4.1 Isolation Forest is deployed for outlier detection and initial segmentation.
-###### 2.4.2 Principle Component Analysis (PCA) is employed for dimensionalty.
+##### 2.4.1 Isolation Forest is deployed for outlier detection and initial segmentation.
+##### 2.4.2 Principle Component Analysis (PCA) is employed for dimensionality reduction.
 
-##### 2.5 [Model Training](Code/model_training.py)
+#### 2.5 [Model Training](Code/model_training.py)
+##### K-Means with K=4 is selected for production.
 
----
-#### 6. Model Evaluation
+#### 2.6 Model Deployment
+##### 2.6.1 [Mlflow Tracking](Code/mlflow_tracking.py)
+###### MLflow is utilized to track each re-trained model.
+##### 2.6.2 [Model Selection](Code/model_selection.py)
+###### The model with the best performance is selected for production
 
----
-#### 7. Model Deployment
+#### 2.7 [Label Production](Code/data_upload)
+##### Clustering result are uploaded and customers are labeled.
+##### Feature dashboard of customers can be developed for further analysis.
 
-##### 7.1 [Mlflow Tracking](Code/mlflow_tracking.py)
-##### 7.2 [Model Selection](Code/model_selection.py)
+#### 2.8 [Main Pipeline(Code/main.py)]
 
-###
 ---
 #### **Contact**
-- ###### **Email:** jeff010426@gmail.com
-- ###### **LinkedIn:** [LinkedIn Link](https://www.linkedin.com/in/chih-peng-javen-li-7b35561b9/)
+##### **Email:** jeff010426@gmail.com
+##### **LinkedIn:** [LinkedIn Link](https://www.linkedin.com/in/chih-peng-javen-li-7b35561b9/)
