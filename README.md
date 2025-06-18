@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/43ae90d0-6798-4325-a713-1fc974e0a040)### **ML_Clustering_LuxuryTravelCustomerSegmentation**
+### **ML_Clustering_LuxuryTravelCustomerSegmentation**
 #### This project develops an business solution─an automated machine learning clustering model─for the luxury travel industry, enabling customer segmentation and labeling to faciliate the subsequent establishment of a feature dashboard and formulation of strategy.
 
 ---
