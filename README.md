@@ -3,7 +3,7 @@
 
 ---
 ### 1. [Experiment](Code/experiment.ipynb)
-#### The business solution for customer segmentation is designed.
+#### The experiment exhibit the business solution for customer segmentation, including data preparation, data exploration, data modeling, model evaluation and Result Analysis.
 
 #### 1.1 Data Preparation
 ##### Data is cleaned and RFM framework is applied for feature engineering.
@@ -14,21 +14,36 @@
 
 #### 1.3 Data Modeling
 ##### 1.3.1 Outlier Detection
-##### Isolation Forest is developed for outlier handling and initial customer segmentation
+###### Isolation Forest is developed for outlier handling and initial customer segmentation
+###### Correlation matrix is deployed to evaluate whether to conduct PCA
 ![](Image/CorrelationMatrix_RFM.png "Correlation Matrix of RFM Variables")
-![](Image/Loading_RFM.png "PCA Loading of RFM Variables")
+###### Loading Matrix is constructed to select the PC for further analysis, illustrating PC1 and PC2 are significant attributes.
+![](Image/Loading_RFM.png "PCA Loading Matrix of RFM Variables")
 
 ##### 1.3.2 Dimensionality Reduction
 ###### Principle Compoment Analysis (PCA) is conducted to reduce dimensionality
 ##### 1.3.3 Clustering Model Building
 ###### Five clustering models are constructed, namely KMeans, AHC, BIRCH, DBSCAN, Mean Shift.
+###### K-Means
+###### The scree plot is visualized to determine the optimal number of K, manifesting that 3 and 4 are elbow points.
 ![](Image/Screeplot_KMeans.png "Scree Plot of KMeans")
-###### ▲ The Scree plot of KMeans
+###### The clustering result of KMeans with K=3 and 4 are visualized.
+![](Image/ScatterPlot_KMeans_3.png "Scatter Plot of KMeans with K=3")
+![](Image/ScatterPlot_KMeans_4.png "Scatter Plot of KMeans with K=4")
+
+###### AHC
+###### The clustering result of AHC is visualized.
+![](Image/ScatterPlot_AHC.png "Scatter Plot of AHC")
+
+###### BIRCH
+###### The clustering result of BIRCH with K=3 and K=4 are visualized
+![](Image/ScatterPlot_Birch_3.png "Scatter Plot of BIRCH with K=3")
+![](Image/ScatterPlot_Birch_4.png "Scatter Plot of BIRCH with K=4")
 
 #### 1.4 Model Evaluation
 
 ---
-#### 1.5 Data Visualization
+#### 1.5 Result Analysis
 
 ---
 ### 2. Production
