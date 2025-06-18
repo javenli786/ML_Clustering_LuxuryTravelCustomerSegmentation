@@ -104,7 +104,7 @@
 ##### Clustering result are uploaded and customers are labeled.
 ##### Feature dashboard of customers can be developed for further analysis.
 
-#### 2.8 [Main Pipeline(Code/main.py)]
+#### 2.8 [Main Pipeline](Code/main.py)
 
 ---
 #### **Contact**
