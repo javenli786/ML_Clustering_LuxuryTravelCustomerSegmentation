@@ -80,7 +80,7 @@
 ###### K-Means with K=4 is chosen to segment customers given its relatively high extent of effectiveness of clustering, similarity and stability.  
 
 #### 1.5 Result Analysis
-
+![](Image/PercentageByCluster.png "Pie Chart exhibitting Percentage of New Segments")
 ---
 ### 2. Production
 #### The key stages of the production-level clusting model development is demonstrated below.  
