@@ -84,7 +84,9 @@
 
 #### 1.5 Result Analysis
 ![](Image/PercentageByCluster.png "Pie Chart exhibitting Percentage of New Segments")
-![](Iamge/RecencyByuster.png "Boxen Plot comparing Recency among New Segments")
+![](Iamge/RecencyByCluster.png "Boxen Plot comparing Recency among New Segments")
+![](Image/FrequencyByCluster.png "Boxen Plot comparing Frequency among New Segments")
+![](Image/MonetaryByCluster.png "Boxen Plot comparing Monetary among New Segments")
 ---
 ### 2. Production
 #### The key stages of the production-level clusting model development is demonstrated below.  
