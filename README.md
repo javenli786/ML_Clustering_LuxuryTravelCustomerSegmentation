@@ -3,7 +3,7 @@
 #### Expected Outcome
 - #### Average value of target customer increase 59%
 - #### Booking volume of target customer esclate 10%
-- #### Efficiency of segmenting customers enhance 75%.
+- #### Efficiency of segmenting customers enhance 75%
 
 ---
 ### 1. [Experiment](Code/experiment.ipynb)
@@ -51,20 +51,20 @@
 ![](Image/ScatterPlot_KMeans_4.png "Figure 15: Scatter Plot of KMeans with K=4")  
 
 ###### AHC
-###### The clustering result of AHC is visualized.
+###### The clustering result of AHC is visualized in Figure 16.
 ![](Image/ScatterPlot_AHC.png "Figure 16: Scatter Plot of AHC")  
 
 ###### BIRCH
-###### The clustering result of BIRCH with K=3 and K=4 are visualized
+###### The clustering result of BIRCH with K=3 and K=4 are visualized in Figure 17 and Figure 18, separately.
 ![](Image/ScatterPlot_Birch_3.png "Figure 17: Scatter Plot of BIRCH with K=3")
 ![](Image/ScatterPlot_Birch_4.png "Figure 18: Scatter Plot of BIRCH with K=4")  
 
 ###### DBSCAN
-###### The clustering result of DBSCAN is visualized.
+###### The clustering result of DBSCAN is visualized in Figure 19.
 ![](Image/ScatterPlot_DBSCAN_4.png "Figure 19: Scatter Plot of DBSCAN")  
 
 ###### Mean Shift
-###### The clustering result of Mean Shift is visualized.
+###### The clustering result of Mean Shift is visualized in Figure 20
 ![](Image/ScatterPlot_MeanShift_4.png "Figure 20: Scatter Plot of MeanShift")  
 
 #### 1.4 Model Evaluation
@@ -72,12 +72,12 @@
 ###### According to the clustering results above, KMeans and BIRCH algorithm are capable for this clustering task.  
 
 ##### 1.4.2 Similarity
-###### Internal cluster validity index (CVIs), Silhouette, Calinski-Harabasz, and Davies-Bouldin indices, are computed, standardized and labelled as “ScaleddScore” to compare cohesion and separation degree within clusters of each model.
+###### Internal cluster validity index (CVIs), Silhouette, Calinski-Harabasz, and Davies-Bouldin indices, are computed, standardized and labelled as “ScaleddScore” to compare cohesion and separation degree within clusters of each model, illustrated by Figure 21.
 ![](Image/Model_EvaluationMetrics.png "Figure 21: Standardized Score of CVIs")  
 
 ##### 1.4.3 Stability
 ###### The clustering outcomes performed by each model on the entire dataset are regarded as the true labels. Each model is re-trained to predict on 50% and 25% subsamples of the data without setting a random seed, with the resulting clusters treated as predicted labels. Subsequently, the Rand Index of each model is computed based on true and predicted labels.
-![](Image/Model_Evaluation_ARI.png, Grouped Box Plot comparing ARI aming Methods)  
+![](Image/Model_Evaluation_ARI.png, "Grouped Box Plot comparing ARI aming Methods")
 
 ##### 1.4.4 Summary
 ###### K-Means with K=4 is chosen to segment customers given its relatively high extent of effectiveness of clustering, similarity and stability.  
@@ -86,14 +86,16 @@
 ##### Customers are grouped into five clusters and their features are further analyzed.
 ![](Image/PercentageByCluster.png "Figure 22: Pie Chart exhibitting Percentage of New Segments")
 
+###### According to Figure 23, 24, 25, Customers within cluster 4 and 3 are named as “Frequent High-valued Spenders” and “Recent High-valued Spenders”, separately, given their relatively high recency, frequency, and monetary. Guests within cluster 0 is labeled as “Steady Spenders”, as they exhibit moderate frequency and spending and possess fairly recent records. Cluster 1 is named as “Recent Spenders”, since they placed highly recent bookings, whereas, their records are infrequent and low-valued. Clients within cluster 2 is labeled as “Lapsed Guests”, given that their records are with the least recency, high infrequency, and the lowest spending. Clients within cluster 5 are marked as “Non-spenders” as they do not place any order.
 ![](Image/RecencyByCluster.png "Figure 23: Boxen Plot comparing Recency among New Segments")
 ![](Image/FrequencyByCluster.png "Figure 24 Boxen Plot comparing Frequency among New Segments")
 ![](Image/MonetaryByCluster.png "Figure 25: Boxen Plot comparing Monetary among New Segments")
-###### According to the above boxen plots regarding RFM attributes, Customers within cluster 4 and 3 are named as “Frequent High-valued Spenders” and “Recent High-valued Spenders”, separately, given their relatively high recency, frequency, and monetary. Guests within cluster 0 is labeled as “Steady Spenders”, as they exhibit moderate frequency and spending and possess fairly recent records. Cluster 1 is named as “Recent Spenders”, since they placed highly recent bookings, whereas, their records are infrequent and low-valued. Clients within cluster 2 is labeled as “Lapsed Guests”, given that their records are with the least recency, high infrequency, and the lowest spending. Clients within cluster 5 are marked as “Non-spenders” as they do not place any order.
 
-![](Image/HeatMap_StatusBySegment.png)
-![](Image/HeatMap_MetaGroupNameBySegment.png)
-![](Image/HeatMap_ClassBySegment.png)
+###### Customer features of each new segment are manifested by Figure 26, 27, 28 and 29.
+![](Image/HeatMap_StatusBySegment.png "Figure 26: Heat Map exhibitting Percentage of Customers in each New Segments by Record Status")
+![](Image/HeatMap_MetaGroupNameBySegment.png "Figure 27: Heat Map exhibitting Percentage of Customers in each New Segment by Meta Group Name")
+![](Image/HeatMap_ClassBySegment.png "Figure 28: Heat Map exhibitting Percentage of Customers in each New Segment by Original Segment")
+![](Image/FeatureDashboard.png "Dashboard exhibitting Percentage of Customer Features in each New Segment")
 
 
 ---
