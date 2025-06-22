@@ -86,7 +86,7 @@
 ##### Customers are grouped into five clusters and their features are further analyzed.
 ![](Image/PercentageByCluster.png "Figure 22: Pie Chart exhibitting Percentage of New Segments")
 
-###### According to Figure 23, 24, 25, Customers within cluster 4 and 3 are named as “Frequent High-valued Spenders” and “Recent High-valued Spenders”, separately, given their relatively high recency, frequency, and monetary. Guests within cluster 0 is labeled as “Steady Spenders”, as they exhibit moderate frequency and spending and possess fairly recent records. Cluster 1 is named as “Recent Spenders”, since they placed highly recent bookings, whereas, their records are infrequent and low-valued. Clients within cluster 2 is labeled as “Lapsed Guests”, given that their records are with the least recency, high infrequency, and the lowest spending. Clients within cluster 5 are marked as “Non-spenders” as they do not place any order.
+###### According to Figure 23, 24, 25, Customers within cluster 4 and 3 are named as "Frequent High-valued Spenders" and "Recent High-valued Spenders", separately, given their relatively high recency, frequency, and monetary. Guests within cluster 0 is labeled as "Steady Spenders", as they exhibit moderate frequency and spending and possess fairly recent records. Cluster 1 is named as "Recent Spenders", since they placed highly recent bookings, whereas, their records are infrequent and low-valued. Clients within cluster 2 is labeled as "Lapsed Guests", given that their records are with the least recency, high infrequency, and the lowest spending. Clients within cluster 5 are marked as “Non-spenders” as they do not place any order.
 ![](Image/RecencyByCluster.png "Figure 23: Boxen Plot comparing Recency among New Segments")
 ![](Image/FrequencyByCluster.png "Figure 24 Boxen Plot comparing Frequency among New Segments")
 ![](Image/MonetaryByCluster.png "Figure 25: Boxen Plot comparing Monetary among New Segments")
@@ -95,7 +95,7 @@
 ![](Image/HeatMap_StatusBySegment.png "Figure 26: Heat Map exhibitting Percentage of Customers in each New Segments by Record Status")
 ![](Image/HeatMap_MetaGroupNameBySegment.png "Figure 27: Heat Map exhibitting Percentage of Customers in each New Segment by Meta Group Name")
 ![](Image/HeatMap_ClassBySegment.png "Figure 28: Heat Map exhibitting Percentage of Customers in each New Segment by Original Segment")
-![](Image/FeatureDashboard.png "Dashboard exhibitting Percentage of Customer Features in each New Segment")
+![](Image/FeatureDashboard.png "Dashboard exhibitting Percentage of Customer in each New Segment By Features")
 
 
 ---
