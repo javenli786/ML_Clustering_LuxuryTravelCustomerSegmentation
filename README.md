@@ -85,6 +85,7 @@
 #### 1.5 Result Analysis
 ##### Customers are grouped into five clusters and their features are further analyzed.
 ![](Image/PercentageByCluster.png "Figure 22: Pie Chart exhibitting Percentage of New Segments")
+
 ![](Image/RecencyByCluster.png "Figure 23: Boxen Plot comparing Recency among New Segments")
 ![](Image/FrequencyByCluster.png "Figure 24 Boxen Plot comparing Frequency among New Segments")
 ![](Image/MonetaryByCluster.png "Figure 25: Boxen Plot comparing Monetary among New Segments")
