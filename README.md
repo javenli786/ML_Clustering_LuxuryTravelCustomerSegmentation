@@ -78,7 +78,7 @@
 
 #### 1.4.3 Stability
 ##### The clustering outcomes performed by each model on the entire dataset are regarded as the true labels. Each model is re-trained to predict on 50% and 25% subsamples of the data without setting a random seed, with the resulting clusters treated as predicted labels. Subsequently, the Rand Index of each model is computed based on true and predicted labels.
-![](Image/Model_Evaluation_ARI.png, "Grouped Box Plot comparing ARI aming Methods")
+![](Image/Model_Evaluation_ARI.png "Grouped Box Plot comparing ARI aming Methods")
 
 #### 1.4.4 Summary
 ##### K-Means with K=4 is chosen to segment customers given its relatively high extent of effectiveness of clustering, similarity and stability.  
