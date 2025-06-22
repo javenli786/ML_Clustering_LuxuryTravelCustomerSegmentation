@@ -14,58 +14,58 @@
 
 #### 1.2 Data Exploration
 ##### 1.2.1 General Exploration
-![](Image/PercentageByLoyaltyClub.png "Percentage of Customers with Different LoyaltyClub")  
-![](Image/Density_EquiryDate.png "Kernel Density Estimate Plot of EnquiryDate")  
-![](Image/Percentage_MetaGroupName.png "Percentage of Customers with Different MetaGroupName")  
-![](Image/Image/Count_People_Night.png "Boxenplots of number of adults, child, infant and night")  
+![](Image/PercentageByLoyaltyClub.png "Figure 1: Percentage of Customers with Different LoyaltyClub")  
+![](Image/Density_EquiryDate.png "Figure 2: Kernel Density Estimate Plot of EnquiryDate")  
+![](Image/Percentage_MetaGroupName.png "Figure 3: Percentage of Customers with Different MetaGroupName")  
+![](Image/Image/Count_People_Night.png "Figure 4: Boxenplots of number of adults, child, infant and night")  
 
 ##### 1.2.2 Segment-Specific Exploration
-![](Image/RecencyBySegmentTitle.png "Boxen Plot Comparing Days among SegmentTitle")
-![](Image/FrequencyBySegmentTitle.png "Boxen Plot Comparing EnquiryN, QuoteN and BookN among SegmentTitle")
-![](Image/MonetaryBySegmentTitle.png/ "Boxen Plot Comparing CommercialValue among SegmentTitle")  
+![](Image/RecencyBySegmentTitle.png "Figure 5: Boxen Plot Comparing Days among SegmentTitle")
+![](Image/FrequencyBySegmentTitle.png "Figure 6: Boxen Plot Comparing EnquiryN, QuoteN and BookN among SegmentTitle")
+![](Image/MonetaryBySegmentTitle.png/ "Figure 7: Boxen Plot Comparing CommercialValue among SegmentTitle")  
 
 #### 1.3 Data Modeling
 ##### 1.3.1 Outlier Detection
 ###### Isolation Forest is developed for outlier handling and initial customer segmentation.
 ###### The outliers exhibit greater recency, frequency and monetary, consequently, outliers are grouped into a segment.
-![](Image/RecencyByOutlier.png "Boxen Plot Comparing Days between Outliers and Non-outliers")
-![](Image/FrequencyByOutlier.png "Boxen Plot Comparing EquiryN, QuoteN and BookN between Outliers and Non-outliers")
-![](Image/MonetaryByOutlier.png "Boxen Plot Comparing CommercialValue between Outliers and Non-outliers")  
+![](Image/RecencyByOutlier.png "Figure 8: Boxen Plot Comparing Days between Outliers and Non-outliers")
+![](Image/FrequencyByOutlier.png "Figure 9: Boxen Plot Comparing EquiryN, QuoteN and BookN between Outliers and Non-outliers")
+![](Image/MonetaryByOutlier.png "Figure 10: Boxen Plot Comparing CommercialValue between Outliers and Non-outliers")  
 
 
 ##### 1.3.2 Dimensionality Reduction
 ###### Principle Compoment Analysis (PCA) is conducted to reduce dimensionality.
 ###### Correlation matrix is deployed to evaluate whether to conduct PCA.
-![](Image/CorrelationMatrix_RFM.png "Correlation Matrix of RFM Variables")
+![](Image/CorrelationMatrix_RFM.png "Figure 11: Correlation Matrix of RFM Variables")
 ###### Loading Matrix is constructed to select the PC for further analysis, illustrating PC1 and PC2 are significant attributes.
-![](Image/Loading_RFM.png "PCA Loading Matrix of RFM Variables")  
+![](Image/Loading_RFM.png "Figure 12: PCA Loading Matrix of RFM Variables")  
 
 ##### 1.3.3 Clustering Model Building
 ###### Five clustering models are constructed, namely KMeans, AHC, BIRCH, DBSCAN, Mean Shift.  
 
 ###### K-Means
 ###### The scree plot is visualized to determine the optimal number of K, manifesting that 3 and 4 are elbow points.
-![](Image/Screeplot_KMeans.png "Scree Plot of KMeans")
+![](Image/Screeplot_KMeans.png "Figure 13: Scree Plot of KMeans")
 ###### The clustering result of KMeans with K=3 and 4 are visualized.
-![](Image/ScatterPlot_KMeans_3.png "Scatter Plot of KMeans with K=3")
-![](Image/ScatterPlot_KMeans_4.png "Scatter Plot of KMeans with K=4")  
+![](Image/ScatterPlot_KMeans_3.png "Figure 14: Scatter Plot of KMeans with K=3")
+![](Image/ScatterPlot_KMeans_4.png "Figure 15: Scatter Plot of KMeans with K=4")  
 
 ###### AHC
 ###### The clustering result of AHC is visualized.
-![](Image/ScatterPlot_AHC.png "Scatter Plot of AHC")  
+![](Image/ScatterPlot_AHC.png "Figure 16: Scatter Plot of AHC")  
 
 ###### BIRCH
 ###### The clustering result of BIRCH with K=3 and K=4 are visualized
-![](Image/ScatterPlot_Birch_3.png "Scatter Plot of BIRCH with K=3")
-![](Image/ScatterPlot_Birch_4.png "Scatter Plot of BIRCH with K=4")  
+![](Image/ScatterPlot_Birch_3.png "Figure 17: Scatter Plot of BIRCH with K=3")
+![](Image/ScatterPlot_Birch_4.png "Figure 18: Scatter Plot of BIRCH with K=4")  
 
 ###### DBSCAN
 ###### The clustering result of DBSCAN is visualized.
-![](Image/ScatterPlot_DBSCAN_4.png "Scatter Plot of DBSCAN")  
+![](Image/ScatterPlot_DBSCAN_4.png "Figure 19: Scatter Plot of DBSCAN")  
 
 ###### Mean Shift
 ###### The clustering result of Mean Shift is visualized.
-![](Image/ScatterPlot_MeanShift_4.png "Scatter Plot of MeanShift")  
+![](Image/ScatterPlot_MeanShift_4.png "Figure 20: Scatter Plot of MeanShift")  
 
 #### 1.4 Model Evaluation
 ##### 1.4.1 Effectiveness
@@ -73,7 +73,7 @@
 
 ##### 1.4.2 Similarity
 ###### Internal cluster validity index (CVIs), Silhouette, Calinski-Harabasz, and Davies-Bouldin indices, are computed, standardized and labelled as “ScaleddScore” to compare cohesion and separation degree within clusters of each model.
-![](Image/Model_EvaluationMetrics.png "Standardized Score of CVIs")  
+![](Image/Model_EvaluationMetrics.png "Figure 21: Standardized Score of CVIs")  
 
 ##### 1.4.3 Stability
 ###### The clustering outcomes performed by each model on the entire dataset are regarded as the true labels. Each model is re-trained to predict on 50% and 25% subsamples of the data without setting a random seed, with the resulting clusters treated as predicted labels. Subsequently, the Rand Index of each model is computed based on true and predicted labels.
@@ -83,10 +83,18 @@
 ###### K-Means with K=4 is chosen to segment customers given its relatively high extent of effectiveness of clustering, similarity and stability.  
 
 #### 1.5 Result Analysis
-![](Image/PercentageByCluster.png "Pie Chart exhibitting Percentage of New Segments")
-![](Image/RecencyByCluster.png "Boxen Plot comparing Recency among New Segments")
-![](Image/FrequencyByCluster.png "Boxen Plot comparing Frequency among New Segments")
-![](Image/MonetaryByCluster.png "Boxen Plot comparing Monetary among New Segments")
+##### Customers are grouped into five clusters and their features are further analyzed.
+![](Image/PercentageByCluster.png "Figure 22: Pie Chart exhibitting Percentage of New Segments")
+![](Image/RecencyByCluster.png "Figure 23: Boxen Plot comparing Recency among New Segments")
+![](Image/FrequencyByCluster.png "Figure 24 Boxen Plot comparing Frequency among New Segments")
+![](Image/MonetaryByCluster.png "Figure 25: Boxen Plot comparing Monetary among New Segments")
+###### According to the above boxen plots regarding RFM attributes, Customers within cluster 4 and 3 are named as “Frequent High-valued Spenders” and “Recent High-valued Spenders”, separately, given their relatively high recency, frequency, and monetary. Guests within cluster 0 is labeled as “Steady Spenders”, as they exhibit moderate frequency and spending and possess fairly recent records. Cluster 1 is named as “Recent Spenders”, since they placed highly recent bookings, whereas, their records are infrequent and low-valued. Clients within cluster 2 is labeled as “Lapsed Guests”, given that their records are with the least recency, high infrequency, and the lowest spending. Clients within cluster 5 are marked as “Non-spenders” as they do not place any order.
+
+![](Image/HeatMap_StatusBySegment.png)
+![](Image/HeatMap_MetaGroupNameBySegment.png)
+![](Image/HeatMap_ClassBySegment.png)
+
+
 ---
 ### 2. Production
 #### The key stages of the production-level clusting model development is demonstrated below.  
