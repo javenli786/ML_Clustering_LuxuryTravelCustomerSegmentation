@@ -6,7 +6,7 @@
 - #### Efficiency of segmenting customers enhance 75%
 
 ---
-### 1. [Experiment](Code/experiment.ipynb)
+# 1. [Experiment](Code/experiment.ipynb)
 #### The experiment exhibit the business solution for customer segmentation, including data preparation, data exploration, data modeling, model evaluation and Result Analysis.
 
 #### 1.1 Data Preparation
