@@ -1,6 +1,6 @@
-### **ML_Clustering_LuxuryTravelCustomerSegmentation**
-#### This project develops an business solution─an automated machine learning clustering model─for the luxury travel industry, enabling customer segmentation and labeling to faciliate the subsequent establishment of a feature dashboard and formulation of strategy.
-#### Expected Outcome
+# **ML_Clustering_LuxuryTravelCustomerSegmentation**
+### This project develops an business solution─an automated machine learning clustering model─for the luxury travel industry, enabling customer segmentation and labeling to faciliate the subsequent establishment of a feature dashboard and formulation of strategy.
+### Expected Outcome
 - #### Average value of target customer increase 59%
 - #### Booking volume of target customer esclate 10%
 - #### Efficiency of segmenting customers enhance 75%
@@ -83,7 +83,7 @@
 ###### K-Means with K=4 is chosen to segment customers given its relatively high extent of effectiveness of clustering, similarity and stability.  
 
 #### 1.5 Result Analysis
-##### Customers are grouped into five clusters and their features are further analyzed.
+##### Customers are grouped into six clusters and their features are further analyzed.
 ![](Image/PercentageByCluster.png "Figure 22: Pie Chart exhibitting Percentage of New Segments")
 
 ###### According to Figure 23, 24, 25, Customers within cluster 4 and 3 are named as "Frequent High-valued Spenders" and "Recent High-valued Spenders", separately, given their relatively high recency, frequency, and monetary. Guests within cluster 0 is labeled as "Steady Spenders", as they exhibit moderate frequency and spending and possess fairly recent records. Cluster 1 is named as "Recent Spenders", since they placed highly recent bookings, whereas, their records are infrequent and low-valued. Clients within cluster 2 is labeled as "Lapsed Guests", given that their records are with the least recency, high infrequency, and the lowest spending. Clients within cluster 5 are marked as “Non-spenders” as they do not place any order.
