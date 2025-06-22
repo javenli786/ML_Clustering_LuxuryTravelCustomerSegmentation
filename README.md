@@ -6,8 +6,11 @@
 - #### Efficiency of segmenting customers enhance 75%
 
 ---
+
 # 1. [Experiment](Code/experiment.ipynb)
-#### The experiment exhibit the business solution for customer segmentation, including data preparation, data exploration, data modeling, model evaluation and Result Analysis.
+### The experiment exhibit the business solution for customer segmentation, including data preparation, data exploration, data modeling, model evaluation and Result Analysis.
+
+# Test
 
 #### 1.1 Data Preparation
 ##### Data is cleaned and RFM framework is applied for feature engineering.
