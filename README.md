@@ -2,13 +2,14 @@
 ### This project develops an business solution─an automated machine learning clustering model─for the luxury travel industry, enabling customer segmentation and labeling to faciliate the subsequent establishment of a feature dashboard and formulation of strategy.
 ### Expected Outcome
 - #### Average value of target customer increase 59%
-- #### Booking volume of target customer esclate 10%
+- #### Booking volume of target customer escalate 10%
 - #### Efficiency of segmenting customers enhance 75%
 
 ---
 
 # 1. [Experiment](Code/experiment.ipynb)
 ### The experiment exhibit the business solution for customer segmentation, including data preparation, data exploration, data modeling, model evaluation and Result Analysis.
+![](Image/Workflow_Experimentation.png)  
 
 ### 1.1 Data Preparation
 #### Data is cleaned and RFM framework is applied for feature engineering.
@@ -101,7 +102,8 @@
 
 ---
 # 2. Production
-### The key stages of the production-level clusting model development are demonstrated below.  
+### The key stages of the production-level clusting model development are demonstrated below. 
+![](Image/Workflow_Experimentation.png) 
 
 ### 2.1 [Data Collection](Code/data_collection.py)
 ##### Sqlchemy and Pandas are leveraged in the step of data collection.  
