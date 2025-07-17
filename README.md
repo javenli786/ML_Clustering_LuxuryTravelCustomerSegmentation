@@ -1,5 +1,5 @@
 # **ML_Clustering_LuxuryTravelCustomerSegmentation**
-### This project develops an business solution─an automated machine learning clustering model─for the luxury travel industry, enabling customer segmentation and labeling to faciliate the subsequent establishment of a feature dashboard and formulation of strategy.
+### This project develops an business solution─an automated machine learning clustering model─for the luxury travel industry, enabling customer segmentation and labeling to facilitate the subsequent establishment of a feature dashboard and formulation of strategy.
 ### Expected Outcome
 - #### Average value of target customer increase 59%
 - #### Booking volume of target customer escalate 10%

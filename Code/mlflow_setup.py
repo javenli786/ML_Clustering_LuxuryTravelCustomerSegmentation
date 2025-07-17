@@ -1,26 +1,22 @@
 import mlflow
 import mlflow.sklearn
 import datetime
-import os
 
 
 
-def setup_mlflow(tracking_uri=None, experiment_name="KMeans_Clustering"):
-    
-    # Set tracking URI
-    if tracking_uri:
-        mlflow.set_tracking_uri(tracking_uri)
-    
-    # Set or create the experiment
-    experiment = mlflow.get_experiment_by_name(experiment_name)
-    if experiment:
-        experiment_id = experiment.experiment_id
+def setup_mlflow(TRACKING_URI, EXPERIMENT_NAME):
+    import mlflow
+
+    mlflow.set_tracking_uri(TRACKING_URI)
+
+    mlflow.set_experiment(EXPERIMENT_NAME)
+
+    experiment = mlflow.get_experiment_by_name(EXPERIMENT_NAME)
+    if experiment is None:
+        experiment_id = mlflow.create_experiment(EXPERIMENT_NAME) 
     else:
-        experiment_id = mlflow.create_experiment(experiment_name)
-    
-    mlflow.set_experiment(experiment_name)
-    
-    return experiment_id
+        experiment_id = experiment.experiment_id
+
 
 
 def log_model_to_mlflow(model_result):
@@ -48,6 +44,3 @@ def log_model_to_mlflow(model_result):
             "run_id": run_id,
             "model_name": model_name
         }
-
-def get_tracking_uri():
-    return mlflow.get_tracking_uri()
