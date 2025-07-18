@@ -36,7 +36,7 @@
 
 
 #### 1.3.2 Dimensionality Reduction
-##### Principle Compoment Analysis (PCA) is conducted to reduce dimensionality.
+##### Principle Conpoment Analysis (PCA) is conducted to reduce dimensionality.
 ##### Correlation matrix is deployed to evaluate whether to conduct PCA.
 ![](image/CorrelationMatrix_RFM.png "Figure 11: Correlation Matrix of RFM Variables")
 ##### Loading Matrix is constructed to select the PC for further analysis, illustrating PC1 and PC2 are significant attributes.
@@ -102,14 +102,14 @@
 
 ---
 # 2. Production
-### The key stages of the production-level clusting model development are demonstrated below. 
+### The key stages of the production-level clustering model development are demonstrated below. 
 ![](image/Workflow_Production.png) 
 
 ### 2.1 [Data Collection](Code/data_collection.py)
-##### Sqlchemy and Pandas are leveraged in the step of data collection.  
+##### SQlAlchemy and Pandas are leveraged in the step of data collection.  
 
 ### 2.2 [Data Preparation](Code/data_preparation.py)
-#### 2.2.1 Numpy and Pandas are utilized in the step of data preparation for data cleaning.
+#### 2.2.1 NumPy and Pandas are utilized in the step of data preparation for data cleaning.
 #### 2.2.2 Feature engineering is conducted on the basis of RFM framework.  
 
 ### 2.3 [Data Exploration](Code/data_exploration.py)
@@ -124,7 +124,7 @@
 #### K-Means with K=4 is selected for production.  
 
 ### 2.6 Model Deployment
-#### 2.6.1 [Mlflow Tracking](Code/mlflow_tracking.py)
+#### 2.6.1 [MLflow Tracking](Code/mlflow_tracking.py)
 ##### MLflow is utilized to track each re-trained model.
 #### 2.6.2 [Model Selection](Code/model_selection.py)
 ##### The model with the best performance is selected for production.  
@@ -138,5 +138,4 @@
 ---
 ### **Contact**
 #### Feel free to contact for further information.
-#### **Email:** jeff010426@gmail.com
 #### **LinkedIn:** [LinkedIn Link](https://www.linkedin.com/in/chih-peng-javen-li-7b35561b9/)
