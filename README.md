@@ -36,7 +36,7 @@
 
 
 #### 1.3.2 Dimensionality Reduction
-##### Principle Conpoment Analysis (PCA) is conducted to reduce dimensionality.
+##### Principle Component Analysis (PCA) is conducted to reduce dimensionality.
 ##### Correlation matrix is deployed to evaluate whether to conduct PCA.
 ![](image/CorrelationMatrix_RFM.png "Figure 11: Correlation Matrix of RFM Variables")
 ##### Loading Matrix is constructed to select the PC for further analysis, illustrating PC1 and PC2 are significant attributes.
