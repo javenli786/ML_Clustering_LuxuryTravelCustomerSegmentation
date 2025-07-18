@@ -7,8 +7,8 @@
 
 ---
 
-# 1. [Experiment](Code/experiment.ipynb)
-### The experiment exhibit the business solution for customer segmentation, including data preparation, data exploration, data modeling, model evaluation and Result Analysis.
+# 1. [Experimentation](Code/experimentation.ipynb)
+### The experimentation exhibits the business solution for customer segmentation, including data preparation, data exploration, data modeling, model evaluation and Result Analysis.
 ![](Image/Workflow_Experimentation.png)  
 
 ### 1.1 Data Preparation
